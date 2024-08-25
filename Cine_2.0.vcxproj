@@ -133,6 +133,7 @@
     <ClCompile Include="Reservation.cpp" />
     <ClCompile Include="ReservationController.cpp" />
     <ClCompile Include="Sale.cpp" />
+    <ClCompile Include="SaleController.cpp" />
     <ClCompile Include="Schedule.cpp" />
     <ClCompile Include="ScheduleController.cpp" />
     <ClCompile Include="TheaterRoomController.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="Reservation.h" />
     <ClInclude Include="ReservationController.h" />
     <ClInclude Include="Sale.h" />
+    <ClInclude Include="SaleController.h" />
     <ClInclude Include="Schedule.h" />
     <ClInclude Include="ScheduleController.h" />
     <ClInclude Include="TheaterRoomController.h" />
