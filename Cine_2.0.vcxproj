@@ -133,6 +133,7 @@
     <ClCompile Include="Reservation.cpp" />
     <ClCompile Include="Sale.cpp" />
     <ClCompile Include="Schedule.cpp" />
+    <ClCompile Include="TheaterRoomController.cpp" />
     <ClCompile Include="TheaterRoom.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +142,7 @@
     <ClInclude Include="Reservation.h" />
     <ClInclude Include="Sale.h" />
     <ClInclude Include="Schedule.h" />
+    <ClInclude Include="TheaterRoomController.h" />
     <ClInclude Include="TheaterRoom.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
