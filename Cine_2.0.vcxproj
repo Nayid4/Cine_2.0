@@ -128,6 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cine_2.0.cpp" />
+    <ClCompile Include="Movie.cpp" />
+    <ClCompile Include="Reservation.cpp" />
+    <ClCompile Include="Schedule.cpp" />
+    <ClCompile Include="TheaterRoom.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Movie.h" />
+    <ClInclude Include="Reservation.h" />
+    <ClInclude Include="Schedule.h" />
+    <ClInclude Include="TheaterRoom.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
