@@ -137,6 +137,7 @@
     <ClCompile Include="RoomManager.cpp" />
     <ClCompile Include="Sale.cpp" />
     <ClCompile Include="SaleController.cpp" />
+    <ClCompile Include="SalesManager.cpp" />
     <ClCompile Include="Schedule.cpp" />
     <ClCompile Include="ScheduleController.cpp" />
     <ClCompile Include="SchedulesManager.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="RoomManager.h" />
     <ClInclude Include="Sale.h" />
     <ClInclude Include="SaleController.h" />
+    <ClInclude Include="SalesManager.h" />
     <ClInclude Include="Schedule.h" />
     <ClInclude Include="ScheduleController.h" />
     <ClInclude Include="SchedulesManager.h" />
