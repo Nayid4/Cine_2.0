@@ -32,7 +32,7 @@ void ReservationsManager::listReservations() const {
     std::cout << "\n===== Lista de Reservas =====\n";
     for (size_t i = 0; i < count; ++i) {
         Reservation reservation = controller.getReservation(i);
-        std::cout << i + 1 << ". Película: " << reservation.getMovie().getName()
+        std::cout << i + 1 << ". Pelicula: " << reservation.getMovie().getName()
             << ", Sala: " << reservation.getRoom().getNumber()
             << ", Fecha: " << reservation.getSchedule().getDay()
             << ", Hora: " << reservation.getSchedule().getStartTime()
@@ -74,7 +74,7 @@ void ReservationsManager::deleteReservation() {
 void ReservationsManager::manageReservations() {
     int choice = 0;
     while (choice != 5) {
-        std::cout << "\n===== Gestión de Reservas =====\n";
+        std::cout << "\n===== Gestion de Reservas =====\n";
         std::cout << "1. Agregar Reserva\n";
         std::cout << "2. Listar Reservas\n";
         std::cout << "3. Actualizar Reserva\n";
@@ -88,8 +88,8 @@ void ReservationsManager::manageReservations() {
         case 2: listReservations(); break;
         case 3: updateReservation(); break;
         case 4: deleteReservation(); break;
-        case 5: std::cout << "Volviendo al menú principal...\n"; break;
-        default: std::cout << "Opción inválida. Intente de nuevo.\n";
+        case 5: std::cout << "Volviendo al menu principal...\n"; break;
+        default: std::cout << "Opcion inválida. Intente de nuevo.\n";
         }
     }
 }
@@ -103,17 +103,17 @@ int ReservationsManager::getMovieIndex() const {
         return -1;
     }
 
-    std::cout << "Películas disponibles:\n";
+    std::cout << "Peliculas disponibles:\n";
     for (size_t i = 0; i < count; ++i) {
         Movie movie = movieController.getMovie(i);
         std::cout << i + 1 << ". " << movie.getName() << " (" << movie.getYear() << ")\n";
     }
 
     int choice;
-    std::cout << "Seleccione el número de la película: ";
+    std::cout << "Seleccione el numero de la película: ";
     std::cin >> choice;
     if (choice < 1 || choice > static_cast<int>(count)) {
-        std::cout << "Selección no válida.\n";
+        std::cout << "Seleccion no válida.\n";
         return -1;
     }
 
@@ -141,7 +141,7 @@ int ReservationsManager::getRoomIndex() const {
     std::cout << "Seleccione el número de la sala: ";
     std::cin >> choice;
     if (choice < 1 || choice > static_cast<int>(count)) {
-        std::cout << "Selección no válida.\n";
+        std::cout << "Seleccion no valida.\n";
         return -1;
     }
 
@@ -154,10 +154,10 @@ int ReservationsManager::getReservationIndex() const {
     size_t count = controller.getReservationCount();
 
     int index;
-    std::cout << "Ingrese el número de la reserva a modificar/eliminar: ";
+    std::cout << "Ingrese el numero de la reserva a modificar/eliminar: ";
     std::cin >> index;
     if (index < 1 || index > static_cast<int>(count)) {
-        std::cout << "Índice no válido.\n";
+        std::cout << "Indice no valido.\n";
         return -1;
     }
 

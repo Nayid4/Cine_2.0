@@ -47,7 +47,7 @@ void RoomManager::updateRoom() {
     getRoomIndex(index);
 
     if (index < 0 || index >= count) {
-        std::cout << "Índice no válido.\n";
+        std::cout << "Indice no valido.\n";
         return;
     }
 
@@ -77,7 +77,7 @@ void RoomManager::deleteRoom() {
     getRoomIndex(index);
 
     if (index < 0 || index >= count) {
-        std::cout << "Índice no válido.\n";
+        std::cout << "Indice no valido.\n";
         return;
     }
 
@@ -88,7 +88,7 @@ void RoomManager::deleteRoom() {
 void RoomManager::manageRooms() {
     int choice = 0;
     while (choice != 5) {
-        std::cout << "\n===== Gestión de Salas =====\n";
+        std::cout << "\n===== Gestion de Salas =====\n";
         std::cout << "1. Agregar Sala\n";
         std::cout << "2. Listar Salas\n";
         std::cout << "3. Actualizar Sala\n";
@@ -102,8 +102,8 @@ void RoomManager::manageRooms() {
         case 2: listRooms(); break;
         case 3: updateRoom(); break;
         case 4: deleteRoom(); break;
-        case 5: std::cout << "Volviendo al menú principal...\n"; break;
-        default: std::cout << "Opción inválida. Intente de nuevo.\n";
+        case 5: std::cout << "Volviendo al menu principal...\n"; break;
+        default: std::cout << "Opcion invalida. Intente de nuevo.\n";
         }
     }
 }
@@ -120,7 +120,7 @@ void RoomManager::getInput(int& number, int& seatCount, float& price) {
 }
 
 void RoomManager::getRoomIndex(int& index) {
-    std::cout << "Ingrese el número de la sala que desea: ";
+    std::cout << "Ingrese el numero de la sala que desea: ";
     std::cin >> index;
     --index; // Ajustar para índice basado en 0
 }

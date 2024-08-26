@@ -1,13 +1,13 @@
 #include "Reservation.h"
 
-Reservation::Reservation(Movie movie, TheaterRoom room, Schedule schedule, int bookingNumber)
+Reservation::Reservation(Movie movie, Room room, Schedule schedule, int bookingNumber)
     : movie(movie), room(room), schedule(schedule), bookingNumber(bookingNumber) {}
 
 Movie Reservation::getMovie() const {
     return movie;
 }
 
-TheaterRoom Reservation::getRoom() const {
+Room Reservation::getRoom() const {
     return room;
 }
 
@@ -23,7 +23,7 @@ void Reservation::setMovie(const Movie& movie) {
     this->movie = movie;
 }
 
-void Reservation::setRoom(const TheaterRoom& room) {
+void Reservation::setRoom(const Room& room) {
     this->room = room;
 }
 

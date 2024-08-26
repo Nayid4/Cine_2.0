@@ -11,7 +11,7 @@ void MovieManager::addMovie() {
     Movie movie(name, year, duration, country, review);
     MovieController::getInstance().addMovie(movie);
 
-    std::cout << "Película agregada exitosamente.\n";
+    std::cout << "Pelicula agregada exitosamente.\n";
 }
 
 void MovieManager::listMovies() {
@@ -19,17 +19,17 @@ void MovieManager::listMovies() {
     size_t count = controller.getMovieCount();
 
     if (count == 0) {
-        std::cout << "No hay películas disponibles.\n";
+        std::cout << "No hay peliculas disponibles.\n";
         return;
     }
 
-    std::cout << "\n===== Lista de Películas =====\n";
+    std::cout << "\n===== Lista de Peliculas =====\n";
     for (size_t i = 0; i < count; ++i) {
         Movie movie = controller.getMovie(i);
         std::cout << i + 1 << ". " << movie.getName()
             << " (" << movie.getYear() << ")\n"
-            << "   Duración: " << movie.getDuration() << " min\n"
-            << "   País: " << movie.getCountry() << "\n"
+            << "   Duracion: " << movie.getDuration() << " min\n"
+            << "   Pais: " << movie.getCountry() << "\n"
             << "   Reseña: " << movie.getReview() << "\n\n";
     }
 }
@@ -39,7 +39,7 @@ void MovieManager::updateMovie() {
     size_t count = controller.getMovieCount();
 
     if (count == 0) {
-        std::cout << "No hay películas para actualizar.\n";
+        std::cout << "No hay peliculas para actualizar.\n";
         return;
     }
 
@@ -49,7 +49,7 @@ void MovieManager::updateMovie() {
     getMovieIndex(index);
 
     if (index < 0 || index >= count) {
-        std::cout << "Índice no válido.\n";
+        std::cout << "Indice no valido.\n";
         return;
     }
 
@@ -61,7 +61,7 @@ void MovieManager::updateMovie() {
     Movie updatedMovie(name, year, duration, country, review);
     controller.updateMovie(index, updatedMovie);
 
-    std::cout << "Película actualizada exitosamente.\n";
+    std::cout << "Pelicula actualizada exitosamente.\n";
 }
 
 void MovieManager::deleteMovie() {
@@ -69,7 +69,7 @@ void MovieManager::deleteMovie() {
     size_t count = controller.getMovieCount();
 
     if (count == 0) {
-        std::cout << "No hay películas para eliminar.\n";
+        std::cout << "No hay peliculas para eliminar.\n";
         return;
     }
 
@@ -79,18 +79,18 @@ void MovieManager::deleteMovie() {
     getMovieIndex(index);
 
     if (index < 0 || index >= count) {
-        std::cout << "Índice no válido.\n";
+        std::cout << "Indice no valido.\n";
         return;
     }
 
     controller.deleteMovie(index);
-    std::cout << "Película eliminada exitosamente.\n";
+    std::cout << "Pelicula eliminada exitosamente.\n";
 }
 
 void MovieManager::manageMovies() {
     int choice = 0;
     while (choice != 5) {
-        std::cout << "\n===== Gestión de Películas =====\n";
+        std::cout << "\n===== Gestion de Peliculas =====\n";
         std::cout << "1. Agregar Película\n";
         std::cout << "2. Listar Películas\n";
         std::cout << "3. Actualizar Película\n";
@@ -104,8 +104,8 @@ void MovieManager::manageMovies() {
         case 2: listMovies(); break;
         case 3: updateMovie(); break;
         case 4: deleteMovie(); break;
-        case 5: std::cout << "Volviendo al menú principal...\n"; break;
-        default: std::cout << "Opción inválida. Intente de nuevo.\n";
+        case 5: std::cout << "Volviendo al menu principal...\n"; break;
+        default: std::cout << "Opcion invalida. Intente de nuevo.\n";
         }
     }
 }
@@ -115,22 +115,22 @@ void MovieManager::getInput(std::string& name, int& year, int& duration, std::st
     std::cin.ignore();
     std::getline(std::cin, name);
 
-    std::cout << "Ingrese el año de la película: ";
+    std::cout << "Ingrese el año de la pelicula: ";
     std::cin >> year;
 
     std::cout << "Ingrese la duración de la película (minutos): ";
     std::cin >> duration;
 
-    std::cout << "Ingrese el país de origen de la película: ";
+    std::cout << "Ingrese el pais de origen de la pelicula: ";
     std::cin.ignore();
     std::getline(std::cin, country);
 
-    std::cout << "Ingrese la reseña de la película: ";
+    std::cout << "Ingrese la reseña de la pelicula: ";
     std::getline(std::cin, review);
 }
 
 void MovieManager::getMovieIndex(int& index) {
-    std::cout << "Ingrese el número de la película que desea: ";
+    std::cout << "Ingrese el numero de la pelicula que desea: ";
     std::cin >> index;
     --index; // Ajustar para índice basado en 0
 }

@@ -9,8 +9,6 @@
 using namespace std;
 
 void showAbout();
-void makeReservation();
-void makeSale();
 
 int main() {
     int mainChoice = 0;
@@ -27,7 +25,7 @@ int main() {
         cout << "3. Reserva\n";
         cout << "4. Venta\n";
         cout << "5. Salir\n";
-        cout << "Seleccione una opción: ";
+        cout << "Seleccione una opcion: ";
         cin >> mainChoice;
 
         switch (mainChoice) {
@@ -37,13 +35,13 @@ int main() {
                 cout << "===== Archivo =====\n";
                 cout << "1. Acerca de\n";
                 cout << "2. Salir\n";
-                cout << "Seleccione una opción: ";
+                cout << "Seleccione una opcion: ";
                 cin >> archivoChoice;
 
                 switch (archivoChoice) {
                 case 1: showAbout(); break;
                 case 2: cout << "Saliendo...\n"; break;
-                default: cout << "Opción inválida. Intente de nuevo.\n";
+                default: cout << "Opcion invalida. Intente de nuevo.\n";
                 }
             }
             break;
@@ -52,7 +50,7 @@ int main() {
             int mantenimientoChoice = 0;
             while (mantenimientoChoice != 4) {
                 cout << "\n===== Mantenimiento =====\n";
-                cout << "1. Películas\n";
+                cout << "1. Peliculas\n";
                 cout << "2. Salas\n";
                 cout << "3. Horarios\n";
                 cout << "4. Volver\n";
@@ -64,7 +62,7 @@ int main() {
                 case 2: roomManager.manageRooms(); break;
                 case 3: schedulesManager.manageSchedules(); break;
                 case 4: cout << "Volviendo al menu principal...\n"; break;
-                default: cout << "Opción inválida. Intente de nuevo.\n";
+                default: cout << "Opcion invalida. Intente de nuevo.\n";
                 }
             }
             break;
@@ -72,7 +70,7 @@ int main() {
         case 3: reservationManager.manageReservations(); break;
         case 4: salesManager.manageSales(); break;
         case 5: cout << "Saliendo del sistema...\n"; break;
-        default: cout << "Opción inválida. Intente de nuevo.\n";
+        default: cout << "Opcion invalida. Intente de nuevo.\n";
         }
     }
 
@@ -81,16 +79,6 @@ int main() {
 
 void showAbout() {
     cout << "\n===== Acerca de =====\n";
-    cout << "Este sistema fue desarrollado por Nayid Junior Castellar Agamez.\n";
+    cout << "Este sistema fue desarrollado por Johhny Aguirre.\n";
 }
 
-
-void makeReservation() {
-    cout << "\nReserva de Películas.\n";
-    // Lógica para realizar una reserva
-}
-
-void makeSale() {
-    cout << "\nVenta de Películas.\n";
-    // Lógica para realizar una venta
-}

@@ -24,7 +24,7 @@ void SchedulesManager::listSchedules() {
     std::cout << "\n===== Lista de Horarios =====\n";
     for (size_t i = 0; i < count; ++i) {
         Schedule schedule = controller.getSchedule(i);
-        std::cout << i + 1 << ". Día: " << schedule.getDay()
+        std::cout << i + 1 << ". Dia: " << schedule.getDay()
             << "\n   Hora de inicio: " << schedule.getStartTime()
             << "\n   Hora de fin: " << schedule.getEndTime() << "\n\n";
     }
@@ -45,7 +45,7 @@ void SchedulesManager::updateSchedule() {
     getScheduleIndex(index);
 
     if (index < 0 || index >= count) {
-        std::cout << "Índice no válido.\n";
+        std::cout << "Indice no valido.\n";
         return;
     }
 
@@ -74,7 +74,7 @@ void SchedulesManager::deleteSchedule() {
     getScheduleIndex(index);
 
     if (index < 0 || index >= count) {
-        std::cout << "Índice no válido.\n";
+        std::cout << "Indice no valido.\n";
         return;
     }
 
@@ -85,7 +85,7 @@ void SchedulesManager::deleteSchedule() {
 void SchedulesManager::manageSchedules() {
     int choice = 0;
     while (choice != 5) {
-        std::cout << "\n===== Gestión de Horarios =====\n";
+        std::cout << "\n===== Gestion de Horarios =====\n";
         std::cout << "1. Agregar Horario\n";
         std::cout << "2. Listar Horarios\n";
         std::cout << "3. Actualizar Horario\n";
@@ -99,14 +99,14 @@ void SchedulesManager::manageSchedules() {
         case 2: listSchedules(); break;
         case 3: updateSchedule(); break;
         case 4: deleteSchedule(); break;
-        case 5: std::cout << "Volviendo al menú principal...\n"; break;
-        default: std::cout << "Opción inválida. Intente de nuevo.\n";
+        case 5: std::cout << "Volviendo al menu principal...\n"; break;
+        default: std::cout << "Opción invalida. Intente de nuevo.\n";
         }
     }
 }
 
 void SchedulesManager::getInput(std::string& day, std::string& startTime, std::string& endTime) {
-    std::cout << "Ingrese el día: ";
+    std::cout << "Ingrese el dia: ";
     std::cin.ignore();
     std::getline(std::cin, day);
 
@@ -118,7 +118,7 @@ void SchedulesManager::getInput(std::string& day, std::string& startTime, std::s
 }
 
 void SchedulesManager::getScheduleIndex(int& index) {
-    std::cout << "Ingrese el número del horario que desea: ";
+    std::cout << "Ingrese el numero del horario que desea: ";
     std::cin >> index;
     --index; // Ajustar para índice basado en 0
 }
