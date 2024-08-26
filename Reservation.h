@@ -2,26 +2,26 @@
 #define RESERVATION_H
 
 #include "Movie.h"
-#include "TheaterRoom.h"
+#include "Room.h"
 #include "Schedule.h"
 
 class Reservation {
 private:
     Movie movie;
-    TheaterRoom room;
+    Room room;
     Schedule schedule;
     int bookingNumber;
 
 public:
-    Reservation(Movie movie, TheaterRoom room, Schedule schedule, int bookingNumber);
+    Reservation(Movie movie, Room room, Schedule schedule, int bookingNumber);
 
     Movie getMovie() const;
-    TheaterRoom getRoom() const;
+    Room getRoom() const;
     Schedule getSchedule() const;
     int getBookingNumber() const;
 
     void setMovie(const Movie& movie);
-    void setRoom(const TheaterRoom& room);
+    void setRoom(const Room& room);
     void setSchedule(const Schedule& schedule);
     void setBookingNumber(int bookingNumber);
 };

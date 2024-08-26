@@ -133,14 +133,15 @@
     <ClCompile Include="MovieManager.cpp" />
     <ClCompile Include="Reservation.cpp" />
     <ClCompile Include="ReservationController.cpp" />
+    <ClCompile Include="ReservationsManager.cpp" />
     <ClCompile Include="RoomManager.cpp" />
     <ClCompile Include="Sale.cpp" />
     <ClCompile Include="SaleController.cpp" />
     <ClCompile Include="Schedule.cpp" />
     <ClCompile Include="ScheduleController.cpp" />
     <ClCompile Include="SchedulesManager.cpp" />
-    <ClCompile Include="TheaterRoomController.cpp" />
-    <ClCompile Include="TheaterRoom.cpp" />
+    <ClCompile Include="RoomController.cpp" />
+    <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Movie.h" />
@@ -148,14 +149,15 @@
     <ClInclude Include="MovieManager.h" />
     <ClInclude Include="Reservation.h" />
     <ClInclude Include="ReservationController.h" />
+    <ClInclude Include="ReservationsManager.h" />
     <ClInclude Include="RoomManager.h" />
     <ClInclude Include="Sale.h" />
     <ClInclude Include="SaleController.h" />
     <ClInclude Include="Schedule.h" />
     <ClInclude Include="ScheduleController.h" />
     <ClInclude Include="SchedulesManager.h" />
-    <ClInclude Include="TheaterRoomController.h" />
-    <ClInclude Include="TheaterRoom.h" />
+    <ClInclude Include="RoomController.h" />
+    <ClInclude Include="Room.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

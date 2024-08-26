@@ -1,14 +1,14 @@
-#ifndef THEATERROOM_H
-#define THEATERROOM_H
+#ifndef ROOM_H
+#define ROOM_H
 
-class TheaterRoom {
+class Room {
 private:
     int number;
     int seatCount;
     float price;
 
 public:
-    TheaterRoom(int number, int seatCount, float price);
+    Room(int number, int seatCount, float price);
 
     int getNumber() const;
     int getSeatCount() const;

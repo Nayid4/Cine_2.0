@@ -1,25 +1,25 @@
-#include "TheaterRoomController.h"
+#include "RoomController.h"
 #include <stdexcept>
 
-TheaterRoomController& TheaterRoomController::getInstance() {
-    static TheaterRoomController instance;
+RoomController& RoomController::getInstance() {
+    static RoomController instance;
     return instance;
 }
 
-TheaterRoomController::TheaterRoomController() {}
+RoomController::RoomController() {}
 
-void TheaterRoomController::addTheaterRoom(const TheaterRoom& room) {
+void RoomController::addRoom(const Room& room) {
     rooms.push_back(room);
 }
 
-TheaterRoom TheaterRoomController::getTheaterRoom(int index) const {
+Room RoomController::getRoom(int index) const {
     if (index >= 0 && index < rooms.size()) {
         return rooms[index];
     }
     throw std::out_of_range("Index out of range");
 }
 
-void TheaterRoomController::updateTheaterRoom(int index, const TheaterRoom& room) {
+void RoomController::updateRoom(int index, const Room& room) {
     if (index >= 0 && index < rooms.size()) {
         rooms[index] = room;
     }
@@ -28,7 +28,7 @@ void TheaterRoomController::updateTheaterRoom(int index, const TheaterRoom& room
     }
 }
 
-void TheaterRoomController::deleteTheaterRoom(int index) {
+void RoomController::deleteRoom(int index) {
     if (index >= 0 && index < rooms.size()) {
         rooms.erase(rooms.begin() + index);
     }
@@ -37,6 +37,6 @@ void TheaterRoomController::deleteTheaterRoom(int index) {
     }
 }
 
-size_t TheaterRoomController::getTheaterRoomCount() const {
+size_t RoomController::getRoomCount() const {
     return rooms.size();
 }

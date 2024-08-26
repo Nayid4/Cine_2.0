@@ -1,7 +1,7 @@
 #ifndef ROOM_MANAGER_H
 #define ROOM_MANAGER_H
 
-#include "TheaterRoomController.h"
+#include "RoomController.h"
 
 class RoomManager {
 public:

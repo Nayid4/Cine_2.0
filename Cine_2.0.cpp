@@ -3,6 +3,7 @@
 #include "MovieManager.h"
 #include "RoomManager.h"
 #include "SchedulesManager.h"
+#include "ReservationsManager.h"
 
 using namespace std;
 
@@ -15,6 +16,7 @@ int main() {
     MovieManager movieManager;
     RoomManager roomManager;
     SchedulesManager schedulesManager;
+    ReservationsManager reservationManager;
 
     while (mainChoice != 5) {
         cout << "===== NUEVA CINEMA SA =====\n";
@@ -65,7 +67,7 @@ int main() {
             }
             break;
         }
-        case 3: makeReservation(); break;
+        case 3: reservationManager.manageReservations(); break;
         case 4: makeSale(); break;
         case 5: cout << "Saliendo del sistema...\n"; break;
         default: cout << "Opción inválida. Intente de nuevo.\n";

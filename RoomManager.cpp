@@ -8,15 +8,15 @@ void RoomManager::addRoom() {
 
     getInput(number, seatCount, price);
 
-    TheaterRoom room(number, seatCount, price);
-    TheaterRoomController::getInstance().addTheaterRoom(room);
+    Room room(number, seatCount, price);
+    RoomController::getInstance().addRoom(room);
 
     std::cout << "Sala agregada exitosamente.\n";
 }
 
 void RoomManager::listRooms() {
-    TheaterRoomController& controller = TheaterRoomController::getInstance();
-    size_t count = controller.getTheaterRoomCount();
+    RoomController& controller = RoomController::getInstance();
+    size_t count = controller.getRoomCount();
 
     if (count == 0) {
         std::cout << "No hay salas disponibles.\n";
@@ -25,7 +25,7 @@ void RoomManager::listRooms() {
 
     std::cout << "\n===== Lista de Salas =====\n";
     for (size_t i = 0; i < count; ++i) {
-        TheaterRoom room = controller.getTheaterRoom(i);
+        Room room = controller.getRoom(i);
         std::cout << i + 1 << ". Sala No. " << room.getNumber()
             << "\n   Asientos: " << room.getSeatCount()
             << "\n   Precio: $" << room.getPrice() << "\n\n";
@@ -33,8 +33,8 @@ void RoomManager::listRooms() {
 }
 
 void RoomManager::updateRoom() {
-    TheaterRoomController& controller = TheaterRoomController::getInstance();
-    size_t count = controller.getTheaterRoomCount();
+    RoomController& controller = RoomController::getInstance();
+    size_t count = controller.getRoomCount();
 
     if (count == 0) {
         std::cout << "No hay salas para actualizar.\n";
@@ -56,15 +56,15 @@ void RoomManager::updateRoom() {
 
     getInput(number, seatCount, price);
 
-    TheaterRoom updatedRoom(number, seatCount, price);
-    controller.updateTheaterRoom(index, updatedRoom);
+    Room updatedRoom(number, seatCount, price);
+    controller.updateRoom(index, updatedRoom);
 
     std::cout << "Sala actualizada exitosamente.\n";
 }
 
 void RoomManager::deleteRoom() {
-    TheaterRoomController& controller = TheaterRoomController::getInstance();
-    size_t count = controller.getTheaterRoomCount();
+    RoomController& controller = RoomController::getInstance();
+    size_t count = controller.getRoomCount();
 
     if (count == 0) {
         std::cout << "No hay salas para eliminar.\n";
@@ -81,7 +81,7 @@ void RoomManager::deleteRoom() {
         return;
     }
 
-    controller.deleteTheaterRoom(index);
+    controller.deleteRoom(index);
     std::cout << "Sala eliminada exitosamente.\n";
 }
 
